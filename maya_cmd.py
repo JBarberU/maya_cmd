@@ -58,7 +58,7 @@ def send_command(port, file_name=None):
     finally:
         client.close()
 
-def main(args):
+def main():
 
     import argparse
     parser = argparse.ArgumentParser()
@@ -77,4 +77,4 @@ def main(args):
         logger.critical('Unable to parse --port as an integer: "{}"'.format(e))
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+    main()
